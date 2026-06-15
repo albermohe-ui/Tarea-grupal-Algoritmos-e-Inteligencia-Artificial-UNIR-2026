@@ -1,0 +1,45 @@
+Preguntas sobre las actividades:
+
+    1. Procesamiento de los datos (0,5 puntos):
+        ◦ ¿Qué método habéis escogido para llevar a cabo la imputación de los datos? Razonad vuestra respuesta. (0,3 puntos).
+          Antes de aplicar cualquier método de imputación, comprobamos la presencia de valores perdidos tanto en el conjunto completo como por columnas y por 
+          muestras. El resultado fue de cero valores NA, cero genes con datos ausentes y cero muestras afectadas. Por este motivo, no aplicamos ningún método de 
+          imputación, ya que el conjunto de datos estaba completo. Si se hubieran detectado valores ausentes aislados, habríamos considerado la imputación mediante
+          la mediana de cada gen, porque es un método robusto frente a valores extremos y respeta la distribución propia de cada variable de expresión.
+
+        ◦ ¿Habéis llevado a cabo algún otro tipo de procesamiento? Razonad vuestra respuesta. (0,2 puntos).
+          Hemos llevado a cabo dos procesamientos más:
+            1) Columnas coincidentes
+            2) Sí. En primer lugar, integramos los tres archivos proporcionados en un único dataframe con 801 muestras, una columna de identificación, una columna 
+               de clase y 500 genes. 
+               Después, comprobamos que no existieran identificadores duplicados, filas repetidas ni nombres de genes duplicados. No encontramos duplicados, por lo 
+               que no fue necesario eliminar muestras ni modificar nombres.
+               También analizamos la variabilidad de los genes mediante la función nearZeroVar(). Detectamos nueve genes con varianza cero o casi cero y los 
+               eliminamos porque aportaban poca información para diferenciar las muestras y podían aumentar innecesariamente el coste computacional. Tras este 
+               filtrado, quedaron 491 genes.
+               Por último, generamos dos versiones de los datos. La primera conserva los valores originales después del filtrado y la segunda contiene las variables 
+               centradas y escaladas, con media aproximada de cero y desviación estándar de uno.La versión escalada es adecuada para métodos sensibles a la escala o
+               basados en distancias, como PCA, k-means, clustering jerárquico, kNN o SVM. La versión sin escalar puede utilizarse en métodos que no requieren 
+               estandarización, como árboles de decisión o Random Forest.
+
+
+    2. Métodos no supervisados (1 punto):
+        ◦ ¿Cuál es el motivo por el cual habéis seleccionado estas técnicas de reducción de dimensionalidad? (0,3 puntos). 
+
+        ◦ ¿Cuál es el motivo por el cual habéis seleccionado estas técnicas de clusterización? (0,3 puntos).
+
+        ◦ En ambos casos, ¿qué aspectos positivos y negativos tienen cada una? (0,2 puntos).
+
+        ◦ En el caso de la clusterización, ¿podéis afirmar con certeza que los clústeres generados son los mejores posibles? Razonad vuestra respuesta. (0,2 puntos).
+
+
+    3. Métodos supervisados (1,75 puntos):
+        ◦ ¿Cuál es el motivo por el cual habéis seleccionado ambas técnicas de aprendizaje supervisado? ¿Cuál ha dado mejores resultados a la hora de clasificar las muestras? Razonad vuestra respuesta. (1 punto).
+        ◦ ¿Habéis considerado oportuno implementar algún método de reducción de dimensionalidad para procesar los datos antes de implementarlos en dichas técnicas? ¿Por qué? (0,5 puntos).
+        ◦ ¿Qué aspectos positivos y negativos tiene cada una de las técnicas que habéis escogido? (0,25 puntos).
+
+    4. De estas cuatro opciones, ¿qué tipo de arquitectura de deep learning sería la más adecuada para procesar datos de expresión génica? Razonad vuestra respuesta (0,25 puntos).
+a) Red de perceptrones (multiperceptron layers).
+b) Redes convolucionales.
+c) Redes recurrentes.
+d) Redes de grafos.
