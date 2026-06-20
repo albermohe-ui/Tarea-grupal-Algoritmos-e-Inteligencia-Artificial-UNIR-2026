@@ -1,5 +1,6 @@
 	
-	De estas cuatro opciones, ¿qué tipo de arquitectura de deep learning sería la más adecuada para procesar datos de expresión génica?  (siendo el dataset de entrenamiento una base de datos con distintas categorías de muestra en las filas, y en las columnas varios genes, cuyos valores de expresión en cada par muestra-gen, son los valores numéricos que completan la matriz. El objetivo de las estructuras deep learning serían, por un lado, la predicción clasificatoria, y por el otro, el clustering, sin atender a las categorías reales) en otra.                                                                                                                                                 Razona tu respuesta, por favor
+	De estas cuatro opciones, ¿qué tipo de arquitectura de deep learning sería la más adecuada para procesar datos de expresión génica?  (siendo el dataset de entrenamiento una base de datos con distintas categorías de muestra en las filas, y en las columnas varios genes, cuyos valores de expresión en cada par muestra-gen, son los valores numéricos que completan la matriz. El objetivo de las estructuras deep learning serían, por un lado, la predicción clasificatoria, y por el otro, el clustering, sin atender a las categorías reales) en otra.                                                                                                                Razona tu respuesta, por favor.
+
 	a) Red de perceptrones (multiperceptron layers).
 	b) Redes convolucionales.
 	c) Redes recurrentes.
