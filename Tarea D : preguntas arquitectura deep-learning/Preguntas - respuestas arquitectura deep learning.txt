@@ -1,0 +1,24 @@
+	
+	De estas cuatro opciones, ¿qué tipo de arquitectura de deep learning sería la más adecuada para procesar datos de expresión génica?  (siendo el dataset de entrenamiento una base de datos con distintas categorías de muestra en las filas, y en las columnas varios genes, cuyos valores de expresión en cada par muestra-gen, son los valores numéricos que completan la matriz. El objetivo de las estructuras deep learning serían, por un lado, la predicción clasificatoria, y por el otro, el clustering, sin atender a las categorías reales) en otra.                                                                                                                                                 Razona tu respuesta, por favor
+	a) Red de perceptrones (multiperceptron layers).
+	b) Redes convolucionales.
+	c) Redes recurrentes.
+	d) Redes de grafos.
+
+
+
+
+	Los conjuntos de datos de expresión génica en general son representados en forma de matriz en la que se enfrentan muestras y genes para el valor de expresión en cada cruce.
+
+
+	Dada esta construcción, la arquitectura de deep learning más adecuada es una red de perceptrones multicapa (multiperceptron layers), puesto que se trata de una presentación en forma tabular en la que cada muestra es un vector de características con el nivel de expresión de cada gen, sin que las relaciones entre ellas sean secuenciales o espaciales. Las redes de perceptrones aprenden combinaciones no lineales entre variables y son eficaces en tareas de clasificación supervisada, como predecir el tipo de muestra. Algunas arquitecturas derivadas, como los autoencoders, también permiten deducir estructuras latentes, lo que puede ser útiles para realizar tareas no supervisadas commo el clustering.
+
+
+	Las redes convolucionales trabajan sobre conjuntos de datos que reflejan estructuras espaciales, como son los píxeles  de las imágenes. En los datos de expresión génica, salvo que se ordenen por una jerarquía de algún tipo de vecindad (aunque no sea en el espacio físico), este tipo de redes no ofrecen ventaja. 
+
+
+	Las redes neuronales recurrentes están diseñadas para modelar datos secuenciales, es decir, de elementos ordenados en los que cada uno guarda una relación explicativa con los que le acompañan en la sucesión. Esto es útil para modelar series temporales o lenguaje natural, pero en el tipo de presentación descrita para los genes, no suele reflejarse una secuencia natural, salvo en el caso que la ordenación reflejase, por ejemplo, una sucesión de activaciones en el desarrollo de un flujo funcional.
+
+
+	Las redes de grafos analizan la información que puede entenderse en forma de nodos y relaciones entre ellos. De nuevo, las características y disposición habituales de los datos de expresión génica no se ajustan a esta condición. Hipotéticamente, podrían resultar útiles si la disposición de datos reflejase la activación en red y se dispusiese de información sobre ello, de modo que pudiese definir un grafo entre genes.
+
