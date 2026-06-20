@@ -392,15 +392,15 @@ fviz_cluster(
 ### presentan solapamientos entre clases, por lo que tampoco es suficiente para 
 ### separar correctamente a las clases.
 
-### En la visualización para k=5, el cluster 1 es el que concentra la falta de separación: agrupa casi
-### toda la clase CGC (139 de 141 muestras) junto con una parte importante
-### de la clase CFB (75 de sus 300 muestras, un 25%). Esto indica que,
-### dentro del espacio de expresión génica, un subconjunto de muestras CFB
-### presenta un perfil más parecido al de CGC que al resto de su propia
+### En la visualización para k=5, el cluster 1 es el que concentra la falta de 
+### separación: agrupa casi toda la clase CGC (139 de 141 muestras) junto con 
+### una parte importante de la clase CFB (75 de sus 300 muestras, un 25%). Esto 
+### indica que, dentro del espacio de expresión génica, un subconjunto de muestras 
+### CFB presenta un perfil más parecido al de CGC que al resto de su propia
 ### clase, lo que coincide con el solapamiento entre CFB y CGC observado
 ### previamente en la proyección de t-SNE y PCA, y explica en buena medida el bajo
-### valor del coeficiente de silueta medio. En la visualización para k=6, el cluster 1 se separa
-### muy bien del resto, pero los clusters 2-6 siguen solapándose.
+### valor del coeficiente de silueta medio. En la visualización para k=6, el 
+### cluster 1 se separa muy bien del resto, pero los clusters 2-6 siguen solapándose.
 
 
 ############################################################
@@ -478,10 +478,10 @@ table(
 ### que estas muestras de CFB no forman un subgrupo homogéneo, sino que se
 ### sitúan en una zona de transición entre varias clases.
 
-### En los 4 métodos de aprendizaje no supervisado, el principal origen de desacuerdo con las clases
-### reales es la clase CFB: una parte de sus muestras se confunde con CGC
-### (en los dos métodos) y, en el caso del clustering jerárquico, también
-### con CHC. Esto es coherente con lo observado tanto en la proyección de
+### En los 4 métodos de aprendizaje no supervisado, el principal origen de 
+### desacuerdo con las clases reales es la clase CFB: una parte de sus muestras 
+### se confunde con CGC (en los dos métodos) y, en el caso del clustering jerárquico, 
+### también con CHC. Esto es coherente con lo observado tanto en la proyección de
 ### t-SNE como en las tablas de contingencia de los apartados anteriores, y
 ### sugiere que, desde el punto de vista de la expresión génica, un
 ### subconjunto de las muestras CFB comparte características con otras
