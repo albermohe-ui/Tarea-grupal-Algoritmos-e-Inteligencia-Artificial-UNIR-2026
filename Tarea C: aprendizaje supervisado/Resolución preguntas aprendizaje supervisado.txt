@@ -1,0 +1,35 @@
+
+1.	¿Cuál es el motivo por el cual habéis seleccionado ambas técnicas de aprendizaje supervisado? ¿Cuál ha dado mejores resultados a la hora de clasificar las muestras? Razonad vuestra respuesta. (1 punto).
+
+              •	Se seleccionaron SVM, árbol de decisión y Naive Bayes para comparar modelos con diferentes enfoques: SVM por su capacidad en alta dimensionalidad, árbol por su       interpretabilidad y Naive Bayes por su simplicidad.
+
+              •	El modelo con mejor rendimiento fue SVM, con accuracy ≈ 0.994 y F1-score ≈ 0.990, superando a Naive Bayes y al árbol de decisión. También son superiores la sensibilidad, especificidad y precisión, esenciales para la eficiencia clasificatoria exigible si la herramienta se emplease, por ejemplo, para el procedimiento diagnóstico de una enfermedad grave.  Estas capacidades se deben a su habilidad en capturar relaciones complejas y generalizar mejor los datos.
+
+
+
+
+
+
+2.	¿Habéis considerado oportuno implementar algún método de reducción de dimensionalidad para procesar los datos antes de implementarlos en dichas técnicas? ¿Por qué? (0,5 puntos).
+
+              •	No se aplicó reducción de dimensionalidad porque los modelos ya obtuvieron métricas muy altas (especialmente SVM y Naive Bayes), lo que indica un buen rendimiento sin   necesidad de reducir variables. Eliminar dimensiones podría haber implicado la pérdida de información y el deterioro de las capacidades discriminativas, lo que sería desfavorable para una herramienta de estas características en determinadas condiciones de uso. 
+
+
+
+
+3.	¿Qué aspectos positivos y negativos tiene cada una de las técnicas que habéis escogido? (0,25 puntos).
+
+              •	VM (Support Vector Machine):
+                      -	Ventajas: alto rendimiento en datos de alta dimensionalidad, capacidad para modelar relaciones complejas y capacidad de generalización 
+                      -	Inconvenientes: menor interpretabilidad, necesidad de elegir  parámetros de ajuste, coste computacional.
+
+              •	Árbol de decisión: 
+                      -	Ventajas: fácil interpretación, visualización de las reglas de decisión, no requiere preprocesado complejo de los datos.
+                      -	 Inconvenientes: menor rendimiento , tendencia al sobreajuste.
+
+               •	Naive Bayes: 
+                      -  Ventajas: modelo simple, rápido y eficiente, buen rendimiento general incluso en alta dimensionalidad. 
+                      - Inconvenientes: asume independencia entre variables, lo cual rara vez se cumple en los datos reales y puede limitar su precisión.
+
+
+
