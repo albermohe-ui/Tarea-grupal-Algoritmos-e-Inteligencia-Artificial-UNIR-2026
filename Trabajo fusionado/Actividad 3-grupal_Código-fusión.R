@@ -1,3 +1,11 @@
+# GRUPO 1
+# Alberto Mohedano Gómez
+# Ariadna Covadonga Tejedor Álvarez
+# Baltasar López Navarro
+# Celia Medrano Rodríguez
+# Israel Peña Vargas
+# Cristina Algarín Sánchez
+
 ############################################################
 #### 1. CARGA INICIAL DE LOS ARCHIVOS
 ############################################################
